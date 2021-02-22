@@ -4,6 +4,7 @@ package entradabloagk;
 /**
  * @author tony
  *
+ *
  */
 
 public class EntradaBlogAGK {
@@ -24,13 +25,14 @@ public class EntradaBlogAGK {
 	
 	
 	/**
-	 * @param id
-	 * @param autor
-	 * @param texto
-	 * @throws IllegalArgumentException
+	 * @param id identificador
+	 * @param autor tony
+	 * @param texto comentario
+	 * @throws IllegalArgumentException valor negativo
 	 */
+	
 	public  EntradaBlogAGK(int id,String autor,String texto)throws IllegalArgumentException{
-		if(id<=0) throw new IllegalArgumentException("El id no puede ser negativo");
+		if(id>=0) throw new IllegalArgumentException("El id no puede ser negativo");
 		this.id=id;
 		this.autor=autor;
 		this.texto=texto;
@@ -55,7 +57,7 @@ public class EntradaBlogAGK {
 	
 	
 	/**
-	 * @return devuelve el texto completo de la entrada
+	 * @return devuelve texto 
 	 */
 	public String getTexto(){
 		return this.texto;
@@ -63,12 +65,15 @@ public class EntradaBlogAGK {
 	
 	
 	/**
-	 * @return devuelve el nombre del autor de la entrada en mayúsculas
+	 * @return devuelve el nombre del autor mayusculas
 	 */
 	public String getAutor(){
 		return this.autor.toUpperCase();
 	}
 	
+	/**
+	 * @return devuelve el nombre del autor 
+	 */
 	public String devuelveAutor(){
 		return this.autor;
 	}
